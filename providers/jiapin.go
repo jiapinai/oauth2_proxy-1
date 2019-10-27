@@ -1,11 +1,14 @@
 package providers
 
 import (
+	"strings"
 	"log"
 	"net/http"
 	"net/url"
 
-	"github.com/bitly/oauth2_proxy/api"
+	"github.com/pusher/oauth2_proxy/pkg/apis/sessions"
+	"github.com/pusher/oauth2_proxy/pkg/logger"
+	"github.com/pusher/oauth2_proxy/pkg/requests"
 )
 
 type JiapinProvider struct {
