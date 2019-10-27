@@ -41,7 +41,7 @@ func NewJiapinProvider(p *ProviderData) *JiapinProvider {
 	return &JiapinProvider{ProviderData: p}
 }
 
-func (p *JiapinProvider) GetEmailAddress(s *SessionState) (string, error) {
+func (p *JiapinProvider) GetEmailAddress(s *sessions.SessionState) (string, error) {
 
 	req, err := http.NewRequest("GET",
 		p.ValidateURL.String()+"?access_token="+s.AccessToken, nil)
