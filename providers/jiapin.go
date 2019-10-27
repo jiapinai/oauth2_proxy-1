@@ -52,7 +52,7 @@ func (p *JiapinProvider) GetEmailAddress(s *sessions.SessionState) (string, erro
 		log.Printf("failed building request %s", err)
 		return "", err
 	}
-	json, err := api.Request(req)
+	json, err := requests.Request(req)
 	if err != nil {
 		log.Printf("failed making request %s", err)
 		return "", err
